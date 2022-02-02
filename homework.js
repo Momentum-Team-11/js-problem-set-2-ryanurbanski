@@ -45,46 +45,92 @@ function remove(array, elementToExclude) {
 
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
+
+
 console.log("QUESTION 2...................................................")
-function remove(array, elementToExclude) {
 
-    console.log("The element being loaded in is: " + array)   //prints the array being fed into this function from the test
-    console.log("The element to exclude is: " + elementToExclude)
-
-    let newArray = array
-
-    for (let i=0; i<=newArray.length; i++) {
-        console.log("Value of i is : " + i)
-        console.log("The element at i is: " + array[i])
-        if (elementToExclude === newArray[i]) {
-            newArray.splice(i,1)
-            console.log("this person is excluded, the new working list is : " + array)
-        } else {
-            console.log("This value is a keeper and will stay in array")
-        }
+function remove (students, name) {
+    let newArray = []
+    // console.log(students)
+    for (let student of students) {
+        if (student != name) {
+            newArray.push(student)
+        }  
+        console.log(newArray)
     }
-    console.log()
-    return newArray;
+    return newArray
 }
+
+
+
+
+
+
+// Not sure why this one didn't work!?!
+
+// function remove(newArray, elementToExclude) {
+//     let array = newArray
+//     console.log("The element being loaded in is: " + array)   //prints the array being fed into this function from the test
+//     console.log("The element to exclude is: " + elementToExclude)
+//     for (let i=0; i<=array.length; i++) {
+//         console.log("Value of i is : " + i)
+//         console.log("The element at i is: " + array[i])
+//         if (elementToExclude === array[i]) {
+//             array.splice(i,1)
+//             console.log("This element was removed.  New array is: " + array)
+//         } else {
+//             console.log("This value is a keeper and will stay in array")
+//         }
+//     }
+//     return array;
+// }
+
 
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
-// console.log("QUESTION 3...................................................")
-// function sum(array1, array2) {
-//     console.log(array1)
-//     console.log(array2)
-    
-//     let sumArray = []
+console.log("QUESTION 3...................................................")
+function sum(numArray) {
+    let sum = 0
+    for(let num of numArray) {
+        sum = sum + num
+    }
+    return sum
+}
 
-//     return sumArray
-// }
 
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+function average(numbs) {
+    let average = 0 
+        for(let single of numbs) {
+            return average =  sum(numbs) / (numbs.length) 
+        }
+}
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+function minimum(array) {
+    let minValue = minimum(array)
+
+
+    return minValue
+}
+
+
+
+
+
+
+
+    // let lowNum = 10000000
+    // for (let j=0; j<array.length; j++) {
+    //     if (array[i]<=lowNum) {
+    //         lowNum = array[i]
+    //     } else {
+    //         return lowNum
+    //     }
+    // }
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
