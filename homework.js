@@ -6,11 +6,79 @@
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
 
+
+console.log("QUESTION 1...................................................")
+function remove(array, elementToExclude) {
+    console.log("The element being loaded in is: " + array)   //prints the array being fed into this function from the test
+    console.log("The element to exclude is: " + elementToExclude)
+    for (let i=0; i<=array.length; i++) {
+        console.log("Value of i is : " + i)
+        console.log("The element at i is: " + array[i])
+        if (elementToExclude === array[i]) {
+            array.splice(i,1)
+        } else {
+            console.log("This value is a keeper and will stay in array")
+        }
+    }
+    return array;
+}
+
+
+
+
+
+
+// // Class Example
+// // write a function that takes an array of numbers and returns only the first number  and last number
+// function rickyBobby(array) {
+//     let ifYouAintFirst = array.shift()
+//     let urLast = array.pop()
+//     let newArray = [ifYouAintFirst, urLast]
+
+//     return newArray
+// }
+
+// let numArray = [1,2,3,4,5,6,7]
+// alert(rickyBobby(numArray))
+// //End of example
+
+
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
+console.log("QUESTION 2...................................................")
+function remove(array, elementToExclude) {
+
+    console.log("The element being loaded in is: " + array)   //prints the array being fed into this function from the test
+    console.log("The element to exclude is: " + elementToExclude)
+
+    let newArray = array
+
+    for (let i=0; i<=newArray.length; i++) {
+        console.log("Value of i is : " + i)
+        console.log("The element at i is: " + array[i])
+        if (elementToExclude === newArray[i]) {
+            newArray.splice(i,1)
+            console.log("this person is excluded, the new working list is : " + array)
+        } else {
+            console.log("This value is a keeper and will stay in array")
+        }
+    }
+    console.log()
+    return newArray;
+}
+
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
+// console.log("QUESTION 3...................................................")
+// function sum(array1, array2) {
+//     console.log(array1)
+//     console.log(array2)
+    
+//     let sumArray = []
+
+//     return sumArray
+// }
 
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
